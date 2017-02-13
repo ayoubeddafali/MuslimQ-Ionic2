@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-buttons end>
+            <button ion-button color="secondary" icon-only (click)="more()"><ion-icon name="add-circle"></ion-icon></button>
+        </ion-buttons>
+        <ion-title>Surah</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-list *ngIf="show()">
+
+        <ion-item *ngFor="let image of images">
+            <img src="{{image}}" alt="">
+        </ion-item>
+    </ion-list>
+</ion-content>

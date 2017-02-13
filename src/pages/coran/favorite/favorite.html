@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-buttons>
+            <button ion-button icon-only (click)="goHome()"><ion-icon name="arrow-back"></ion-icon></button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list no-lines>
+        <ion-item-sliding *ngFor="let item of favorites">
+            <ion-item>{{item}}</ion-item>
+            <ion-item-options side="right">
+                <button ion-button color="danger" (click)="delete(item)">Delete</button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+
+
+</ion-content>

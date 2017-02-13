@@ -1,0 +1,96 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-buttons end>
+            <button ion-button icon-only color="secondary">
+              <ion-icon name="help-circle"></ion-icon>
+            </button>
+
+        </ion-buttons>
+        <ion-title>
+            <p class="today"> {{todayDate}} </p>
+            <p class="today">{{hijriDate}}</p>
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only color="secondary">
+            <ion-icon name="settings"></ion-icon>
+          </button>
+        </ion-buttons>
+    </ion-navbar>
+    <ion-toolbar class="widgets" color="secondary">
+        <ion-slides [options]="mySlideOptions" *ngIf="currentUserData">
+            <ion-slide>
+                <p>Fajr</p>
+                <p class="date">{{prayerTimesForToday.fajr | uppercase}}</p>
+                <p>{{currentUserData.state}}</p>
+            </ion-slide>
+            <ion-slide>
+                <p>Sunrise</p>
+                <p class="date">{{prayerTimesForToday.shurooq | uppercase}}</p>
+                <p>{{currentUserData.state}}</p>
+            </ion-slide>
+            <ion-slide>
+                <p>Dhuhr</p>
+                <p class="date">{{prayerTimesForToday.dhuhr | uppercase}}</p>
+                <p>{{currentUserData.state}}</p>
+            </ion-slide>
+            <ion-slide>
+                <p>Asr</p>
+                <p class="date">{{prayerTimesForToday.asr | uppercase}}</p>
+                <p>{{currentUserData.state}}</p>
+            </ion-slide>
+            <ion-slide>
+                <p>Maghrib</p>
+                <p class="date">{{prayerTimesForToday.maghrib | uppercase}}</p>
+                <p>{{currentUserData.state}}</p>
+            </ion-slide>
+            <ion-slide>
+                <p>Isha'a</p>
+                <p class="date">{{prayerTimesForToday.isha | uppercase}}</p>
+                <p>{{currentUserData.state}}</p>
+            </ion-slide>
+
+        </ion-slides>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="main">
+
+    <ion-grid>
+
+        <ion-row>
+            <ion-col width-50 class="option">
+                <img src="assets/img/prayer-times.jpg" alt="">
+            </ion-col>
+            <ion-col width-50 class="option" (click)="openCoranPage()">
+                <img src="assets/img/al-quran.jpg" alt="">
+
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col width-50 class="option">
+
+                <img src="assets/img/wqibla.png" alt="">
+
+
+
+
+            </ion-col>
+            <ion-col width-50 class="option">
+                <img src="assets/img/adkar.png" alt="">
+
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col width-50 class="option">
+                <img src="assets/img/about.png" alt="">
+
+            </ion-col>
+            <ion-col width-50 class="option">
+                <img src="assets/img/about.png" alt="">
+
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

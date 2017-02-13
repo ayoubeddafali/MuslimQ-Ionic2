@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-buttons>
+            <button ion-button icon-only (click)="goHome()"><ion-icon name="arrow-back"></ion-icon></button>
+        </ion-buttons>
+
+    </ion-navbar>
+</ion-header>
+<ion-content>
+
+    <ion-list>
+        <ion-item *ngFor="let surah of surahs">
+            <ion-row (click)="openSurah(surah.number,surah.numberOfAyahs,surah.englishName)">
+                <ion-col width-10 class="number">{{surah.number}}</ion-col>
+                <ion-col width-20 class="name"> {{surah.name | formatSurah}}</ion-col>
+                <ion-col width-20 offset-10 class="ayah"> {{surah.numberOfAyahs}} ايات</ion-col>
+                <ion-col with-30 class="name" offset-10> {{surah.englishName}}</ion-col>
+
+            </ion-row>
+        </ion-item>
+    </ion-list>
+
+</ion-content>

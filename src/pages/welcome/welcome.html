@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar color="primary">
+
+        <ion-title>Welcome</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+    <ion-slides [options]="{pager: true}">
+
+        <ion-slide style="background-image: url('assets/img/mosque.jpg')">
+            <p>Never forget prayer times !!</p>
+        </ion-slide>
+
+        <ion-slide style="background-image: url('assets/img/qibla.jpg')">
+            <p>Get the direction of Qibla so easily !!</p>
+        </ion-slide>
+
+        <ion-slide style="background-image: url('assets/img/quran.jpg')">
+            <p>Read The Quran wherever you are !!</p>
+            <button ion-button color="secondary" round (click)="goHome()">Get Started</button>
+        </ion-slide>
+
+    </ion-slides>
+
+</ion-content>

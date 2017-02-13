@@ -1,0 +1,20 @@
+$font1: "Claire Hand";
+$font2:"Estrangelo Edessa";
+page-quran {
+    .name {
+        font-family: $font2;
+        font-size: 0.9em;
+        color: color($colors, primary)
+    }
+    .number {
+        font-family: $font2;
+        font-size: 0.9em;
+    }
+    .ayah {
+        font-family: $font2;
+        font-size: 0.8em;
+    }
+    ion-item:hover {
+        background-color: color($colors, secondary);
+    }
+}
