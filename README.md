@@ -10,7 +10,7 @@ MuslimQ is an Islamic application that comes with a lot of handy features :
 The app isn't finished yet, so recommandation would be very helpful 
 
 
-![alt img](https://github.com/ayoubensalem/MuslimQ-Ionic2/demo/anim.gif)
+![alt img](https://github.com/ayoubensalem/MuslimQ-Ionic2/blob/master/demo/anim.gif)
 
 #### Built With : 
  * Angular 2 
